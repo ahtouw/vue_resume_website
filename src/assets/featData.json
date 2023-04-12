@@ -1,0 +1,60 @@
+[
+  {
+    "type": "about",
+    "details": [
+      "Business Analyst working towards transitioning into a DevOps Engineer role. I am a quick, adaptable learner with knowledge in AWS, Terraform, and Github Actions."
+    ]
+  },
+  {
+    "type": "project",
+    "title": "Cloud Resume Challenge",
+    "link": "project link",
+    "date": "March 2023",
+    "details": [
+      "Hosted website with backend on AWS",
+      "Built infrastructure as code using Terraform",
+      "Tested and deployed project with Github Actions",
+      "Frontend using Vue, Vuetify"
+    ]
+  },
+  {
+    "type": "cert",
+    "title": "AWS Solutions Architect",
+    "link": "",
+    "date": "February 2023",
+    "details": []
+  },
+  {
+    "type": "job",
+    "title": "Business Analyst",
+    "date": "November 2021 - Current",
+    "company": "State of Michigan",
+    "details": [
+      "Expert witness for IT and Security in multiple Utility rate cases",
+      "Saved customers over $4 million in CapEx via project disallowances",
+      "Analyzed and reported utility expense trends"
+    ]
+  },
+  {
+    "type": "job",
+    "title": "AI/ML Engineer Student",
+    "date": "December 2019 - August 2020",
+    "company": "Revature LLC",
+    "details": [
+      "Completed rigorous training bootcamp in Machine Learning technologies",
+      "Deployed models using Python libraries including Tensorflow, Scikit-Learn, Pandas, and Numpy",
+      "Collaborated with associates to create models that achieved 95% accuracy"
+    ]
+  },
+  {
+    "type": "job",
+    "title": "Bench Technician",
+    "date": "February 2018 - February 2019",
+    "company": "California Surveying & Drafting Supply ",
+    "details": [
+      "Diagnosed and repaired customer equipment issues with two-day turnaround",
+      "Constructed estimates and communicated with customers about repairs",
+      "Performed high precision calibrations"
+    ]
+  }
+]

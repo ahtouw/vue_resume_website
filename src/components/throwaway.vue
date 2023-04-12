@@ -1,0 +1,106 @@
+<template>
+  <div class="stackedit__html">
+    <p>
+      This was a very involved project that provided a good foundational
+      knowledge in using AWS, Terraform, GitHub Actions, Vue, and Vuetify. I
+      honestly had a blast working on this project and never found myself
+      wanting to quit, even through the challenging bits.
+      <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/"
+        >Find out more about the challenge</a
+      >.
+    </p>
+    <h2 id="project-goals">Project Goals</h2>
+    <p>
+      The main goal with this project was to build a resume website, hosted on
+      AWS. As I worked I gradually found myself adding to this goal, out of both
+      natural curiosity for other technologies and feeling a need for a more
+      polished architecture and design. This led me to learn to use Terraform,
+      to make my infrastructure more sustainable, and Vue/Vuetify to add some
+      depth to my website’s frontend.
+    </p>
+    <h2 id="architecture">Architecture</h2>
+    <p>
+      The project’s AWS architecture is not too complex. S3 stores website
+      files, CloudFront serves these files globally, AWS Certificate Manager
+      (ACM) provides certificates for encrypted network connections, and Route
+      53 manages records to your website. On the backend, API Gateway uses a
+      Lambda function to access and update a DynamoDB table that contains
+      information about how often the website has been accessed. An ACM
+      certificate was used to securely access the API Gateway from the website.
+      GitHub Actions uses OIDC to get AWS credentials securely so that it can
+      run the Terraform commands and build the infrastructure.
+    </p>
+    <v-img
+      src="@/assets/CloudArchitecture.png"
+      class="mx-auto"
+      max-width="400"
+      min-width="300"
+    />
+    <h2 id="key-steps">Key Steps</h2>
+    <h3 id="starting-off">Starting off:</h3>
+    <p>
+      I started off by jumping into the basics, getting a website up and running
+      with S3, CloudFront, ACM, and Route 53. Origin Access Controls (OAC) was
+      utilized to ensure the S3 bucket could only be accessed by CloudFront.
+      Using the AWS Management Console, getting an up and running basic website
+      was relatively quick and simple. The biggest hurdle in this process was
+      figuring out how to get the ACM certificates issued. I discovered later
+      that getting my feet wet in the AWS Management Console would be very
+      helpful while working with (and troubleshooting) Terraform.
+    </p>
+    <h3 id="moving-to-terraform">Moving to Terraform:</h3>
+    <p>
+      At this point in the project I figured I was about half way through
+      (sorely mistaken). I decided it would be a good point to transition my
+      website to Terraform so that when I develop the next steps of my project
+      it would be all done in Terraform and I wouldn’t have to do redundant
+      work. Getting the website up and running in Terraform was a process that
+      felt a lot like putting Lego pieces together. I knew I needed to connect
+      the S3 blocks with the CloudFront blocks and, after learning about
+      <code>$ terraform import</code>, things went smoothly. Moving into
+      building out the backend, I was confident. Unfortunately what I didn’t
+      realize was that because this would be my first time working with Lambda,
+      API Gateway, and DynamoDB, I didn’t really know what needed to hook up
+      where. With my blind confidence I set off to building the backend on
+      Terraform, only to later find myself manually using the Management Console
+      as a Proof of Concept of sorts to learn what needed to be done. Finally,
+      after many hours of troubleshooting, <code>$ terraform destroy</code> and
+      <code>$ terraform apply</code>resulted in a fully functional website with
+      backend. It’s an unusually good feeling when you can completely destroy
+      your infrastructure and rebuild it.
+    </p>
+    <h3 id="github-actions">GitHub Actions:</h3>
+    <p>
+      With the biggest part of the project complete, I set up some basic tests
+      on GitHub Actions to test the Python Lambda function and make sure that it
+      can retrieve from the DynamoDB table, then I had the file build the
+      Terraform project. To provide AWS credentials, I used OIDC, which I had
+      previously discovered and used while configuring my Terraform files. This
+      step took the least amount of time and was overall pretty stress-free.
+    </p>
+    <h3 id="vue-and-vuetify">Vue and Vuetify:</h3>
+    <p>
+      The project at this point was all but done but I wasn’t satisfied with the
+      look of the website. I thought about using Bootstrap to polish it off but
+      ended up trying Vue with Vuetify. I had some light experience working with
+      React but chose to use Vue as a colleague in a Discord I was in
+      recommended it for its simplicity. I played with many components provided
+      by Vuetify before deciding on a simpler design that reacted well to
+      smaller screen sizes. The focus of this project was not a robust frontend
+      so this worked well for my purposes while also providing me with some good
+      experience.
+    </p>
+    <h2 id="takeaways-and-improvements">Takeaways and Improvements</h2>
+    <p>
+      This project was a great experience and gave me an appreciation for the
+      whole process of building infrastructure and working with a website. To
+      further improve this project, I could build out more robust and
+      comprehensive testing, make my website more interactive, and develop more
+      separation between production and test environments and front and backend
+      permissions. In the future, I’d like to work with Terraform and use
+      services that were not covered in this project such as EC2, Load
+      Balancers, and VPCs.
+    </p>
+    <pre><code></code></pre>
+  </div>
+</template>
