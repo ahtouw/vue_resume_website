@@ -32,10 +32,7 @@
       </v-card>
 
       <v-card flat class="bg-light-green-lighten-3">
-        <v-card-title
-          primary-title
-          style="font-size: 1.8rem; font-weight: bold"
-        >
+        <v-card-title style="font-size: 1.8rem; font-weight: bold">
           {{ project.goal.title }}
           <v-divider
             color="success"
@@ -50,10 +47,7 @@
       </v-card>
 
       <v-card flat>
-        <v-card-title
-          primary-title
-          style="font-size: 1.8rem; font-weight: bold"
-        >
+        <v-card-title style="font-size: 1.8rem; font-weight: bold">
           {{ project.architecture.title }}
           <v-divider
             color="success"
@@ -74,10 +68,7 @@
       </v-card>
 
       <v-card flat class="bg-light-green-lighten-3">
-        <v-card-title
-          primary-title
-          style="font-size: 1.8rem; font-weight: bold"
-        >
+        <v-card-title style="font-size: 1.8rem; font-weight: bold">
           {{ project.steps.title }}
           <v-divider
             color="success"
@@ -91,10 +82,7 @@
           flat
           class="bg-light-green-lighten-3"
         >
-          <v-card-title
-            primary-title
-            style="font-size: 1.2rem; font-weight: bold"
-          >
+          <v-card-title style="font-size: 1.2rem; font-weight: bold">
             {{ step.title }}
           </v-card-title>
 
@@ -105,10 +93,7 @@
       </v-card>
 
       <v-card flat>
-        <v-card-title
-          primary-title
-          style="font-size: 1.8rem; font-weight: bold"
-        >
+        <v-card-title style="font-size: 1.8rem; font-weight: bold">
           {{ project.conclusion.title }}
           <v-divider
             color="success"
