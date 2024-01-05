@@ -7,6 +7,16 @@
   },
   {
     "type": "project",
+    "title": "Data Annotator - Python/SQL",
+    "date": "October 2023 - Current",
+    "details": [
+      "Assess AI models' ability to generate and interpret code",
+      "Performed limit tests to identify limitations within models",
+      "Worked primarily with Python (Pandas, Matplotlib) and SQL, some JS/React"
+    ]
+  },
+  {
+    "type": "project",
     "title": "Cloud Resume Challenge",
     "link": "project link",
     "date": "March 2023",
